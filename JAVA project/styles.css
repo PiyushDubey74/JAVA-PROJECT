@@ -1,0 +1,492 @@
+/* BASIC LAYOUT */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1b0f16; /* dark backdrop behind sections */
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header is fixed */
+body {
+    padding-top: 60px;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    background-color: #1b313b;
+    padding: 0.6rem 3rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 32px;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.top-menu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.top-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.top-menu a:hover {
+    text-decoration: underline;
+}
+
+.country {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.flag {
+    font-size: 1.1rem;
+}
+
+/* MAIN STRUCTURE */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HERO SECTION */
+.hero {
+    background-color: #f7f8fb;
+    padding: 3rem 0 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* SEARCH CARD */
+.search-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 2rem 2.5rem;
+    max-width: 1150px;
+    width: 90%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.search-card h1 {
+    font-size: 2.1rem;
+    margin: 0 0 1rem 0;
+    color: #00223a;
+}
+
+.search-card .price {
+    color: #0078b5;
+}
+
+/* TOP OPTIONS */
+.search-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.option {
+    border: none;
+    background: transparent;
+    color: #00223a;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 0.4rem 0.6rem;
+    border-radius: 999px;
+}
+
+.option.active {
+    background-color: #eef7ff;
+}
+
+/* SEARCH FORM */
+.search-form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.field {
+    background-color: #f6f7fb;
+    border-radius: 12px;
+    padding: 0.6rem 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.field label {
+    font-size: 0.8rem;
+    color: #6a6d7a;
+    margin-bottom: 0.15rem;
+}
+
+.field input {
+    border: none;
+    background: transparent;
+    font-size: 0.95rem;
+    outline: none;
+    color: #1b1f2f;
+}
+
+/* SEARCH BUTTON */
+.search-btn {
+    background-color: #c4932e;
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    padding: 0 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #b28120;
+}
+
+/* ROUTE SECTION */
+.route-section {
+    background-color: #f7f8fb;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 3rem;
+    margin-top: -0.5rem;
+}
+
+.route-header {
+    width: 90%;
+    max-width: 1150px;
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumb {
+    font-size: 0.85rem;
+    color: #7b7f88;
+    margin: 0 0 0.5rem 0;
+}
+
+.breadcrumb span {
+    color: #2c2f3a;
+    font-weight: 500;
+}
+
+.route-header h2 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.8rem;
+    color: #2c2f3a;
+}
+
+/* FROM–TO BAR */
+.route-inputs {
+    display: grid;
+    grid-template-columns: 1.8fr auto 1.8fr;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.route-field {
+    background-color: #ffffff;
+    border-radius: 999px;
+    padding: 0.6rem 1rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+}
+
+.route-field label {
+    display: block;
+    font-size: 0.8rem;
+    color: #7b7f88;
+    margin-bottom: 0.1rem;
+}
+
+.route-value {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #2c2f3a;
+}
+
+.route-value .icon {
+    font-size: 1.1rem;
+}
+
+.swap-btn {
+    width: 52px;
+    border-radius: 16px;
+    border: none;
+    background-color: #f0f2f7;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/* MONTH CARDS */
+.month-cards {
+    width: 90%;
+    max-width: 1150px;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.month-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 1.7rem 1.6rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    color: #2c2f3a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.month-card--active {
+    background: linear-gradient(135deg, #223447, #182434);
+    color: #ffffff;
+}
+
+.month-card h3 {
+    margin: 0 0 0.9rem 0;
+    font-size: 1.35rem;
+}
+
+.month-card .price {
+    margin: 0.1rem 0 0.4rem 0;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.month-card .meta {
+    margin: 0.15rem 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.month-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+/* DEALS SECTION */
+.deals-section {
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0 3.5rem;
+}
+
+.deals-header {
+    width: 90%;
+    max-width: 1150px;
+    margin-bottom: 1.5rem;
+}
+
+.deals-header h2 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.9rem;
+    color: #2c2f3a;
+}
+
+/* FILTERS */
+.deals-filters {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.2fr;
+    gap: 1rem;
+}
+
+.deals-filter-field {
+    background-color: #f7f8fb;
+    border-radius: 999px;
+    padding: 0.6rem 1rem;
+    border: 1px solid #e0e2ea;
+}
+
+.deals-filter-field label {
+    display: block;
+    font-size: 0.8rem;
+    color: #7b7f88;
+    margin-bottom: 0.1rem;
+}
+
+.deals-filter-field .value {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.95rem;
+    color: #2c2f3a;
+}
+
+.deals-filter-field .icon {
+    font-size: 1.1rem;
+}
+
+/* DEALS GRID */
+.deals-grid {
+    width: 90%;
+    max-width: 1150px;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+/* DEAL CARD */
+.deal-card {
+    background-color: #f9fafc;
+    border-radius: 18px;
+    padding: 1.4rem 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    border: 1px solid #e4e7ef;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+    border-color: #c4932e;
+}
+
+.deal-main h3 {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.05rem;
+    color: #232736;
+}
+
+.deal-dates {
+    margin: 0 0 0.2rem 0;
+    font-size: 0.92rem;
+    color: #5b5f6e;
+}
+
+.deal-type {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #7c808d;
+}
+
+.deal-price {
+    text-align: right;
+    min-width: 130px;
+}
+
+.deal-price .label {
+    display: block;
+    font-size: 0.8rem;
+    color: #7c808d;
+}
+
+.deal-price .amount {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #c4932e;
+    margin-top: 0.1rem;
+}
+
+.deal-price .seen {
+    display: block;
+    font-size: 0.8rem;
+    color: #7c808d;
+    margin-top: 0.25rem;
+}
+
+/* WEATHER SECTION */
+.weather-section {
+    background-color: #f7f8fb;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0 2.5rem;
+}
+
+.weather-header {
+    width: 90%;
+    max-width: 1150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.weather-header h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #2c2f3a;
+}
+
+/* UNIT TOGGLE */
+.weather-unit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #7b7f88;
+}
+
+.weather-unit .label {
+    margin-right: 0.25rem;
+}
+
+.unit-btn {
+    border-radius: 999px;
+    border: 1px solid #d1d5e3;
+    padding: 0.25rem 0.9rem;
+    background-color: #ffffff;
+    color: #2c2f3a;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.unit-btn.active {
+    background-color: #c4932e;
+    border-color: #c4932e;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+
